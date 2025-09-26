@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    /* Colors */
+
+--gradient: linear-gradient(to right, #ffa399, #ff4d97);
+
+--blue-200: #dddbff;
+--blue-850: #1d2c67;
+--blue-950: #0c122c;
+--grayish-blue: #848794;
+
+--weight-400: 400;
+--weight-700: 700;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    background: url(images/bg-mobile.png) no-repeat center center;
+    background-size: cover;
+
+
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header {
+    background-color: var(--blue-850);
+    padding: 2rem 1.5rem;
+    width: 90%;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icons img {
+    background-color: var(--blue-950);
+    padding: 1rem;
+    border-radius: 10px;
+}
