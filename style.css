@@ -41,19 +41,39 @@ body {
     gap: 2rem;
 }
 
-.header {
+.header, .storage {
     background-color: var(--blue-850);
-    padding: 2rem 1.5rem;
     width: 90%;
+}
+
+.header {
+    padding: 2rem 1.5rem;
+    border-radius: 10px 90px 10px 10px;
 }
 
 .icons {
     display: flex;
     gap: 1rem;
+    margin-top: 2rem;
 }
 
 .icons img {
     background-color: var(--blue-950);
     padding: 1rem;
     border-radius: 10px;
+}
+
+.storage {
+    color: var(--blue-200);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.used .highlight {
+    color: white;
+}
+
+.progress-bar .progress {
+    padding: 2rem;
+    background-color: var(--gradient);
 }
