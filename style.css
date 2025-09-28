@@ -73,7 +73,33 @@ body {
     color: white;
 }
 
-.progress-bar .progress {
-    padding: 2rem;
-    background-color: var(--gradient);
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: var(--blue-950);
+  border-radius: 20px;
+  padding: 2px; /* espaço para a barra interna */
+}
+
+.progress {
+  display: block;
+  width: 81.5%; /* 815 de 1000 GB */
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 20px;
+  position: relative; /* necessário para posicionar o dot */
+}
+
+.progress-dot {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+}
+
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
 }
