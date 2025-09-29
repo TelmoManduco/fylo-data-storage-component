@@ -66,6 +66,7 @@ body {
 .storage {
     color: var(--blue-200);
     padding: 2rem 1.5rem;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -79,11 +80,12 @@ body {
   background-color: var(--blue-950);
   border-radius: 20px;
   padding: 2px; /* espaço para a barra interna */
+  margin: 1rem 0;
 }
 
 .progress {
   display: block;
-  width: 81.5%; /* 815 de 1000 GB */
+  width: 70.5%; /* 815 de 1000 GB */
   height: 100%;
   background: var(--gradient);
   border-radius: 20px;
@@ -94,12 +96,28 @@ body {
     position: absolute;
     right: 2px;
     top: 50%;
+    transform: translateY(-50%);
     width: 12px;
     height: 12px;
     background-color: white;
+    border-radius: 50%;
 }
 
 .bar-labels {
     display: flex;
     justify-content: space-between;
+}
+
+.storage-left {
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    padding: 2rem 0;
+    width: 150px;
+
+}
+
+.storage-left span {
+    font-size: 2rem;
+    font-weight: bold;
 }
