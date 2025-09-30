@@ -109,15 +109,6 @@ body {
 }
 
 .storage-left {
-    margin: 0 auto;
-    background-color: white;
-    color: black;
-    padding: 2rem 0;
-    width: 150px;
 
-}
 
-.storage-left span {
-    font-size: 2rem;
-    font-weight: bold;
 }
