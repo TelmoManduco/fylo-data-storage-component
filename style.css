@@ -68,6 +68,7 @@ body {
     padding: 2rem 1.5rem;
     border-radius: 10px;
     text-align: center;
+    position: relative;
 }
 
 .used .highlight {
@@ -109,6 +110,17 @@ body {
 }
 
 .storage-left {
+    background-color: white;
+    height: 72px;
+    width: 178px;
+    border-radius: 10px;
+    margin: 0 auto;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    position: absolute;
+    bottom: -35px;
+    right: 5.7rem;
 }
