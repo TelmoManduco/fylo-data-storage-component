@@ -1,78 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  /* Colors */
+  --gradient: linear-gradient(to right, #ffa399, #ff4d97);
 
-    /* Colors */
+  --blue-200: #dddbff;
+  --blue-850: #1d2c67;
+  --blue-950: #0c122c;
+  --grayish-blue: #848794;
 
---gradient: linear-gradient(to right, #ffa399, #ff4d97);
-
---blue-200: #dddbff;
---blue-850: #1d2c67;
---blue-950: #0c122c;
---grayish-blue: #848794;
-
---weight-400: 400;
---weight-700: 700;
-
+  --weight-400: 400;
+  --weight-700: 700;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    background: url(images/bg-mobile.png) no-repeat center center;
-    background-size: cover;
-
-
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background: url(images/bg-mobile.png) no-repeat center center;
+  background-size: cover;
 }
 
 .main {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh; /* mais seguro que height:100vh */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.header, .storage {
-    background-color: var(--blue-850);
-    width: 90%;
+.header,
+.storage {
+  background-color: var(--blue-850);
+  width: 90%;
 }
 
 .header {
-    padding: 2rem 1.5rem;
-    border-radius: 10px 90px 10px 10px;
+  padding: 2rem 1.5rem;
+  border-radius: 10px 90px 10px 10px;
 }
 
 .icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .icons img {
-    background-color: var(--blue-950);
-    padding: 1rem;
-    border-radius: 10px;
+  background-color: var(--blue-950);
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .storage {
-    color: var(--blue-200);
-    padding: 2rem 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
+  color: var(--blue-200);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
 }
 
-.used .highlight {
-    color: white;
+.storage p span {
+  font-weight: var(--weight-700);
+  color: white; /* destaque para o número usado */
 }
 
 .progress-bar {
@@ -90,37 +88,67 @@ body {
   height: 100%;
   background: var(--gradient);
   border-radius: 20px;
-  position: relative; /* necessário para posicionar o dot */
+  position: relative;
 }
 
 .progress-dot {
-    position: absolute;
-    right: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    background-color: white;
-    border-radius: 50%;
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .bar-labels {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
 .storage-left {
-    background-color: white;
-    height: 72px;
-    width: 178px;
-    border-radius: 10px;
-    margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  margin: 1.5rem auto 0; /* centralizado no mobile */
+  padding: 1rem 2rem;
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: auto 0 -35px 0; /* top | right | bottom | left */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
 
-    position: absolute;
-    bottom: -35px;
-    right: 5.7rem;
+.storage-left span.number {
+  color: var(--blue-950);
+  font-weight: var(--weight-700);
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.storage-left span.text {
+  color: var(--grayish-blue);
+}
+
+@media (min-width: 1000px) {
+    body {
+        background: var(--blue-950) url(images/bg-desktop.png) no-repeat bottom;
+        background-size: 100% 58%;
+    }
+
+    .main {
+        max-width: 900px;
+        flex-direction: row;
+    }
+
+    .header {
+        width: 50%;
+    }
+
+    .storage .used {
+        text-align: left;
+    }
 }
